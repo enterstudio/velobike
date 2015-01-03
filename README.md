@@ -7,8 +7,8 @@ Routes — clicking in stations placemarks it shows total stats, stats by hours,
 Activity — heatmaps shows how active every part of bike share coverage, you can play an animation or choose a slice of data by time, hour or by weekday. 
 Timeline — bike stats by day of the period. Graph shows how weather conditions influence on bike share system.
 
-Source data: *  [Velobike](http://velobike.ru/)Velobike
+Source data is provided by [Velobike](http://velobike.ru/)Velobike
 
-The project developed using few great tools:
+This project was built using few great tools:
   * [Yandex Maps API](http://api.yandex.ru/maps) + [heatmap module](https://github.com/yandex/mapsapi-heatmap)
   * [D3.js](d3js.org)
