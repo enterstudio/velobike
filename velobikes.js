@@ -1036,7 +1036,7 @@ ymaps.ready(function () {
         for (var d in params.days) {
             d3.select("#heatmap-controls-days")
                 .append("div")
-                .attr("id", "byDay-" + d)
+                .attr("id", "byDay-" + params.days[d].num)
                 .attr("class", "control")
                 .text(params.days[d][lang])
                 .on("click", function () {
