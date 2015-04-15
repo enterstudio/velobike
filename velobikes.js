@@ -774,9 +774,9 @@ ymaps.ready(function () {
 
         //getting routes in the panel and on the map
         stations[code].routes.forEach(function (d, i) {
-            if(i>1000) {
 
                 var routeSnippet = stationPanelContent.append("div").attr("class", "route");
+                //console.log()
 
                 routeSnippet.append("div").attr("class", "route-total").text(Math.round(d.total / stations[code].total * 1000) / 10 + "%").attr("title", Math.round(d.total / stations[code].total * 1000) / 10 + "% — общее число прокатов по маршруту");
 
@@ -790,7 +790,7 @@ ymaps.ready(function () {
                 routeParams.append("span").attr("class", "route-code").text("#" + d.to);
                 routeParams.append("span").attr("class", "route-duration").text(d.duration + " мин.");
                 routeParams.append("span").attr("class", "route-distance").text(humanDistance(d.distance));
-            }
+				console.log(d.duration);
 
                 if (stations[code].code !== d.to) {
                     stationsRoutes.add(new ymaps.Polyline([
