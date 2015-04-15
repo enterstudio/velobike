@@ -327,7 +327,7 @@ ymaps.ready(function () {
     });
 
 //loading stations CSV
-    d3.tsv("data/stations_11.csv?guatemala", function (d, i) {
+    d3.tsv("data/stations_11.csv?sjsjsj", function (d, i) {
 
             //getting data about stations
             //stations.push();
@@ -775,23 +775,6 @@ ymaps.ready(function () {
         //getting routes in the panel and on the map
         stations[code].routes.forEach(function (d, i) {
 
-                var routeSnippet = stationPanelContent.append("div").attr("class", "route");
-                //console.log()
-
-                routeSnippet.append("div").attr("class", "route-total").text(Math.round(d.total / stations[code].total * 1000) / 10 + "%").attr("title", Math.round(d.total / stations[code].total * 1000) / 10 + "% — общее число прокатов по маршруту");
-
-                if (code === d.to)
-                    routeSnippet.append("div").attr("class", "route-title roundtrip").text(params.labels.roundtrip[lang]);
-                else
-                    routeSnippet.append("div").attr("class", "route-title").text(stations[d.to].name);
-
-
-                var routeParams = routeSnippet.append("div").attr("class", "route-params");
-                routeParams.append("span").attr("class", "route-code").text("#" + d.to);
-                routeParams.append("span").attr("class", "route-duration").text(d.duration + " мин.");
-                routeParams.append("span").attr("class", "route-distance").text(humanDistance(d.distance));
-				console.log(d.duration);
-
                 if (stations[code].code !== d.to) {
                     stationsRoutes.add(new ymaps.Polyline([
                         [stationsOrdered[s].lat, stationsOrdered[s].lon],
@@ -862,8 +845,9 @@ ymaps.ready(function () {
                             radius: w
                         }
                     });
-
-                pl.events.add('click', function (e) {
+                console.log(station.code + ': ' + station.lat + ' ' + station.lon);
+                
+				pl.events.add('click', function (e) {
                     getStationPanel(e.get('target').properties.get('id'));
                     getTooltip(event.pageX, event.pageY, {
                         first: station.name + "(#" + station.code + ")",
