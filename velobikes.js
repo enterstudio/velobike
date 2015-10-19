@@ -775,6 +775,8 @@ ymaps.ready(function () {
         //getting routes in the panel and on the map
         stations[code].routes.forEach(function (d, i) {
 
+          //stationPanelContent.append("div").attr("class", "route").text(stationsOrdered[getStationIndex(d.to)].name + "(" + Math.floor((d.total/stations[code].total)*100) + ")");
+
                 if (stations[code].code !== d.to) {
                     stationsRoutes.add(new ymaps.Polyline([
                         [stationsOrdered[s].lat, stationsOrdered[s].lon],
@@ -846,7 +848,7 @@ ymaps.ready(function () {
                         }
                     });
                 console.log(station.code + ': ' + station.lat + ' ' + station.lon);
-                
+
 				pl.events.add('click', function (e) {
                     getStationPanel(e.get('target').properties.get('id'));
                     getTooltip(event.pageX, event.pageY, {
