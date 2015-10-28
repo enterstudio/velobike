@@ -51,6 +51,7 @@ var params = {
     },
     labels: {
         docTitle: { ru: "Статистика поездок на Велобайках по Москве. Статистика велопрокатов в Москве за 2014", en: "Bike share stats in Moscow, season 2014"},
+        newProject: { ru: "Проект 2015 →", en: "2015 project →" },
         menuRoutes: { ru: "Маршруты", en: "Routes" },
         menuHeatmap: { ru: "Активность", en: "Activity" },
         menuCalendar: { ru: "Календарь", en: "Timeline" },

@@ -16,6 +16,33 @@ h2 {
     font-size: 24px;
 }
 
+#new-project-link {
+/*  position: absolute;
+  left: 0;
+  bottom: 8px;
+  z-index: 100500;
+  text-align: center;
+  padding: 2px;
+  color: #ccc;
+  background: rgba(0, 0, 0, 0.8);
+  display: block;
+  font-size: 14px;
+  */
+}
+
+#new-project-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#new-project-link:visited,
+#new-project-link:active,
+#new-project-link:hover
+ {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 #loader {
     position: absolute;
     left: 0;
@@ -774,7 +801,8 @@ a, a:visited {
 
 
     #share-like {
-        display: none;
+        display: block;
+        line-height: 20px;
 
     }
 

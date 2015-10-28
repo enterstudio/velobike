@@ -57,6 +57,9 @@ function detectLang() {
 //change document title
 document.title = params.labels.docTitle[lang];
 
+//new project link text
+d3.select("#new-project-link").text(params.labels.newProject[lang]);
+
 //work on loaders
 var loaderInterval; //the timeout to load
 var loader = d3.select("#loader"),
